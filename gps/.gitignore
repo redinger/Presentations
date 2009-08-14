@@ -1,7 +1,9 @@
 .DS_Store
+app/stylesheets/.sass*
 config/database.yml
 config/initializers/myinit.rb
 db/*.sqlite3
 log/*.log
+public/stylesheets/compiled/*
 tmp/**/*
 tmp/restart.txt
