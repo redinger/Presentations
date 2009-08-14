@@ -4,3 +4,4 @@ config/initializers/myinit.rb
 db/*.sqlite3
 log/*.log
 tmp/**/*
+tmp/restart.txt
