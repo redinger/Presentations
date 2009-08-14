@@ -1,0 +1,12 @@
+-title 'Devices'
+.container
+%table
+  %thead
+    %tr
+      %td Name
+      %td IMEI
+  %tbody
+    - Device.all.each do |device|
+      %tr
+        %td= device.name
+        %td= device.imei
