@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090814221317) do
+ActiveRecord::Schema.define(:version => 20090816022134) do
 
   create_table "devices", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,31 @@ ActiveRecord::Schema.define(:version => 20090814221317) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "readings", :force => true do |t|
+    t.integer  "device_id"
+    t.string   "admin_name1"
+    t.string   "address"
+    t.float    "altitude"
+    t.string   "event_type"
+    t.boolean  "geocoded",      :default => false, :null => false
+    t.boolean  "gpio1"
+    t.boolean  "gpio2"
+    t.float    "direction"
+    t.boolean  "ignition"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "note"
+    t.boolean  "notified",      :default => false
+    t.string   "place_name"
+    t.float    "speed"
+    t.string   "street"
+    t.string   "street_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "readings", ["device_id"], :name => "index_readings_on_device_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                             :null => false

@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.resource :account, :controller => "users"
-  map.resources :devices, :password_resets, :users
+  map.resources :devices, :password_resets, :readings, :users
   map.root :controller => "user_sessions", :action => "new"
   map.login 'login', :controller => "user_sessions", :action => "new"
   map.logout 'logout', :controller => "user_sessions", :action => "destroy"

@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password
   protect_from_forgery
+
+  before_filter :require_user
   
   private
   def current_user_session

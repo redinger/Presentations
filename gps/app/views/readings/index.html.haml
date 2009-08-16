@@ -1,0 +1,40 @@
+-title 'Readings'
+.container
+%table
+  %thead
+    %tr
+      %td Device
+      %td Admin Name 1
+      %td Address
+      %td Altitude
+      %td Event Type
+      %td Geocoded
+      %td GPIO1
+      %td GPIO2
+      %td Direction
+      %td Ignition
+      %td Latitude
+      %td Longitude
+      %td Place Name
+      %td Speed
+      %td Street
+      %td Street Number
+  %tbody
+    - Reading.all.each do |reading|
+      %tr
+        %td= link_to reading.device.name, devices_path
+        %td= reading.admin_name1
+        %td= reading.address
+        %td= reading.altitude
+        %td= reading.event_type
+        %td= reading.geocoded
+        %td= reading.gpio1
+        %td= reading.gpio2
+        %td= reading.direction
+        %td= reading.ignition
+        %td= reading.latitude
+        %td= reading.longitude
+        %td= reading.place_name
+        %td= reading.speed
+        %td= reading.street
+        %td= reading.street_number

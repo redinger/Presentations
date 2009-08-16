@@ -17,7 +17,7 @@ config.action_controller.perform_caching             = false
 config.action_mailer.raise_delivery_errors = false
 config.middleware.use "Rack::Bug"
 
-config.gem "cwninja-inaction_mailer",
+config.gem 'cwninja-inaction_mailer',
   :lib => 'inaction_mailer/force_load',
   :source => 'http://gems.github.com',
   :version => '>= 0.6'

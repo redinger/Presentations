@@ -20,14 +20,19 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
-  config.gem "chriseppstein-compass",
+  config.gem 'authlogic',
+    :version => '>= 2.1.1'
+  config.gem 'chriseppstein-compass',
     :lib => 'compass',
     :version => '>= 0.8.9',
     :source => 'http://gems.github.com'
-  config.gem 'haml',
+  config.gem 'ffmike-db_populate',
+    :lib => 'create_or_update',
+    :source => 'http://gems.github.com',
+    :version => '>= 0.2.3'
+    config.gem 'haml',
     :version => '>= 2.2.2'
-  config.gem 'authlogic',
-    :version => '>= 2.1.1'
+    
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

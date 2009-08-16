@@ -5,8 +5,10 @@
     %tr
       %td Name
       %td IMEI
+      %td # Readings
   %tbody
     - Device.all.each do |device|
       %tr
         %td= device.name
         %td= device.imei
+        %td= link_to device.readings.count, readings_path
