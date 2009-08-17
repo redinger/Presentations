@@ -1,12 +1,2 @@
-HOST_DOMAIN = 'agiledisciple.com'
-
-EXCEPTION_EMAIL = 'exceptions@agiledisciple.com'
-REPLY_EMAIL = "noreply@agiledisciple.com"
-
-if ENV["RAILS_ENV"] == "production"
-  ActionMailer::Base.default_url_options[:host] = 'agiledisciple.com'
-else
-  ActionMailer::Base.default_url_options[:host] = 'gps.local'
-end
-
-APP_NAME='GPS Tracking'
+APP_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/config.yml")[RAILS_ENV]
+ActionMailer::Base.default_url_options[:host] = APP_CONFIG["default_url_host"]

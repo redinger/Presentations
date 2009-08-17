@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
     :version => '>= 2.1.1'
   config.gem 'chriseppstein-compass',
     :lib => 'compass',
-    :version => '>= 0.8.9',
+    :version => '>= 0.8.10',
     :source => 'http://gems.github.com'
   config.gem 'ffmike-db_populate',
     :lib => 'create_or_update',

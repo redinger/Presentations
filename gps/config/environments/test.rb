@@ -28,7 +28,7 @@ config.action_mailer.delivery_method = :test
 # config.active_record.schema_format = :sql
 
 config.gem 'cucumber',
-  :version => '>= 0.3.94'
+  :version => '>= 0.3.95'
 config.gem 'jscruggs-metric_fu',
   :lib => 'metric_fu',
   :version => '>= 1.1.4',

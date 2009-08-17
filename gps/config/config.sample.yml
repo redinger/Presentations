@@ -1,0 +1,21 @@
+shared: &SHARED
+  host_domain: gps.local
+  exception_email: exceptions@spg.local
+  reply_email: noreply@gps.local
+  app_name: GPS Tracking
+
+production:
+  <<: *SHARED
+  default_url_host: gps.local
+
+test:
+  <<: *SHARED
+  default_url_host: gps.local
+
+development:
+  <<: *SHARED
+  default_url_host: gps.local
+
+cucumber:
+  <<: *SHARED
+  default_url_host: gps.local

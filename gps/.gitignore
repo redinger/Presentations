@@ -1,7 +1,7 @@
 .DS_Store
 app/stylesheets/.sass*
 config/database.yml
-config/initializers/0myinit.rb
+config/config.yml
 db/*.sqlite3
 log/*.log
 public/stylesheets/compiled/*

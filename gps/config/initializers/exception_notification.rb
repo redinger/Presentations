@@ -1,3 +1,3 @@
-ExceptionNotifier.exception_recipients = [EXCEPTION_EMAIL]
-ExceptionNotifier.sender_address = %("Application Error" <#{REPLY_EMAIL}>)
+ExceptionNotifier.exception_recipients = [APP_CONFIG["exception_email"]]
+ExceptionNotifier.sender_address = %("Application Error" <#{APP_CONFIG['reply_email']}>)
 ExceptionNotifier.email_prefix = "[GPS ERROR] "
