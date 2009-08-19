@@ -1,14 +1,19 @@
 -title 'Devices'
+=content_for(:head) do
+  %script{:src => "http://maps.google.com/maps/api/js?sensor=true"}
+
+-javascript(:maps)
 .container
-%table
-  %thead
-    %tr
-      %td Name
-      %td IMEI
-      %td # Readings
-  %tbody
-    - Device.all.each do |device|
+  %table
+    %thead
       %tr
-        %td= device.name
-        %td= device.imei
-        %td= link_to device.readings.count, readings_path
+        %td Name
+        %td IMEI
+        %td # Readings
+    %tbody
+      - @devices.each do |device|
+        %tr
+          %td= device.name
+          %td= device.imei
+          %td= link_to device.readings.count, readings_path
+  #map_canvas{:style => "width:640px; height:480px"}
