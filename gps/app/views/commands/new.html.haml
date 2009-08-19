@@ -5,5 +5,6 @@
   %br
   = f.label :command, "Command"
   = f.select :command, AvailableCommand.select_options(:key => :name)
+  = link_to 'New', new_available_command_path
   %br
   = f.submit "Send"

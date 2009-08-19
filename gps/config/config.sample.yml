@@ -1,6 +1,6 @@
 shared: &SHARED
   host_domain: gps.local
-  exception_email: exceptions@spg.local
+  exception_email: exceptions@gps.local
   reply_email: noreply@gps.local
   app_name: GPS Tracking
 

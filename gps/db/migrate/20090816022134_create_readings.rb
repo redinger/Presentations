@@ -19,6 +19,9 @@ class CreateReadings < ActiveRecord::Migration
       t.float :speed
       t.string :street
       t.string :street_number
+      t.integer :reference_id
+      t.string :geofence_event_type
+      t.references :geofence
       t.timestamps
     end
     

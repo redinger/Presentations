@@ -5,7 +5,6 @@ class CreateCommands < ActiveRecord::Migration
       t.string :command
       t.string :response
       t.string :status, :default => 'Processing'
-      t.datetime :started_at
       t.datetime :ended_at
       t.integer :reference_id
 

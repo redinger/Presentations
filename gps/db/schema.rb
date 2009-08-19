@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(:version => 20090819183629) do
     t.string   "command"
     t.string   "response"
     t.string   "status",       :default => "Processing"
-    t.datetime "started_at"
     t.datetime "ended_at"
     t.integer  "reference_id"
     t.datetime "created_at"
@@ -43,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20090819183629) do
     t.string   "address"
     t.float    "altitude"
     t.string   "event_type"
-    t.boolean  "geocoded",      :default => false, :null => false
+    t.boolean  "geocoded",            :default => false, :null => false
     t.boolean  "gpio1"
     t.boolean  "gpio2"
     t.float    "direction"
@@ -51,11 +50,14 @@ ActiveRecord::Schema.define(:version => 20090819183629) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "note"
-    t.boolean  "notified",      :default => false
+    t.boolean  "notified",            :default => false
     t.string   "place_name"
     t.float    "speed"
     t.string   "street"
     t.string   "street_number"
+    t.integer  "reference_id"
+    t.string   "geofence_event_type"
+    t.integer  "geofence_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
