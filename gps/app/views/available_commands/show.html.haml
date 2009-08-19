@@ -1,0 +1,8 @@
+%p
+  %b Name:
+  = @available_command.name
+%p
+  %b Command:
+  = @available_command.command
+= link_to 'Edit', edit_available_command_path(@available_command) |
+= link_to 'Back', available_commands_path

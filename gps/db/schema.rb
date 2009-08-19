@@ -9,7 +9,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090816022134) do
+ActiveRecord::Schema.define(:version => 20090819183629) do
+
+  create_table "available_commands", :force => true do |t|
+    t.string   "command"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "commands", :force => true do |t|
+    t.integer  "device_id"
+    t.string   "command"
+    t.string   "response"
+    t.string   "status",       :default => "Processing"
+    t.datetime "started_at"
+    t.datetime "ended_at"
+    t.integer  "reference_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "devices", :force => true do |t|
     t.string   "name"

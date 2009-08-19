@@ -10,7 +10,13 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
-    
+
+    when /^the available commands index page$/i
+      available_commands_path
+
+    when /^the commands index page$/i
+      commands_path
+
     when /^the devices index page$/i
       devices_path
 

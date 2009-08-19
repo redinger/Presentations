@@ -10,10 +10,12 @@
         %td Name
         %td IMEI
         %td # Readings
+        %td # Commands
     %tbody
       - @devices.each do |device|
         %tr
           %td= link_to device.name, '#', {:class => 'center_map', :id => device.id}
           %td= device.imei
           %td= link_to device.readings.count, readings_path
+          %td= link_to device.commands.count, commands_path
   #map_canvas{:style => "width:640px; height:480px"}

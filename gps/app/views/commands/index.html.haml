@@ -1,0 +1,23 @@
+- title "Commands"
+%table
+  %thead
+    %tr
+      %td Device
+      %td Command
+      %td Response
+      %td Status
+      %td Started
+      %td Ended
+      %td Reference
+  %tbody
+    - Command.all.each do |command|
+      %tr
+        %td= link_to command.device.name, devices_path
+        %td= command.command
+        %td= command.response
+        %td= command.status
+        %td= command.started_at
+        %td= command.ended_at
+        %td= command.reference_id
+
+= link_to 'New Command', new_command_path

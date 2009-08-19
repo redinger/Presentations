@@ -1,0 +1,8 @@
+--- 
+format: 1
+handler: 
+  commit: f6a19c9545b1db9b2139926c058afcaa50ba7c25
+  branch: master
+lock: false
+repository_url: git://github.com/rubysolo/hashdown.git
+repository_class: Piston::Git::Repository

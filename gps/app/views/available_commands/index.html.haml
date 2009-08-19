@@ -1,0 +1,15 @@
+-title "Listing Available Commands"
+
+%table
+  %tr
+    %th Name
+    %th Command
+-@available_commands.each do |available_command|
+  %tr
+    %td= available_command.name
+    %td= available_command.command
+    %td= link_to 'Show', available_command
+    %td= link_to 'Edit', edit_available_command_path(available_command)
+    %td= link_to 'Destroy', available_command, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New', new_available_command_path

@@ -1,0 +1,17 @@
+-title "New Available Command"
+
+- form_for(@available_command) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :command
+    %br
+    = f.text_field :command
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', available_commands_path
