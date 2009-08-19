@@ -23,6 +23,13 @@ $(document).ready(function() {
            map: map, 
            title:this.device.name
        });
+       
+       $('a#' + this.device.id).data("latlng", latlng)
     });
   });
+  
+  $('a.center_map').livequery('click', function() {
+    map.set_center($(this).data("latlng"))
+  });
+  
 });

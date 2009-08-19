@@ -13,7 +13,7 @@
     %tbody
       - @devices.each do |device|
         %tr
-          %td= device.name
+          %td= link_to device.name, '#', {:class => 'center_map', :id => device.id}
           %td= device.imei
           %td= link_to device.readings.count, readings_path
   #map_canvas{:style => "width:640px; height:480px"}
