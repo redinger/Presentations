@@ -7,9 +7,6 @@
       %td Address
       %td Altitude
       %td Event Type
-      %td Geocoded
-      %td GPIO1
-      %td GPIO2
       %td Direction
       %td Ignition
       %td Latitude
@@ -19,16 +16,13 @@
       %td Street
       %td Street Number
   %tbody
-    - Reading.all.each do |reading|
+    - @readings.each do |reading|
       %tr
-        %td= link_to reading.device.name, devices_path
+        %td= link_to reading.device_name, devices_path
         %td= reading.admin_name1
         %td= reading.address
         %td= reading.altitude
         %td= reading.event_type
-        %td= reading.geocoded
-        %td= reading.gpio1
-        %td= reading.gpio2
         %td= reading.direction
         %td= reading.ignition
         %td= reading.latitude
@@ -37,3 +31,5 @@
         %td= reading.speed
         %td= reading.street
         %td= reading.street_number
+        
+= will_paginate @readings

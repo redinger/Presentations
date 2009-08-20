@@ -30,8 +30,13 @@ Rails::Initializer.run do |config|
     :lib => 'create_or_update',
     :source => 'http://gems.github.com',
     :version => '>= 0.2.3'
-    config.gem 'haml',
+  config.gem 'haml',
     :version => '>= 2.2.2'
+  config.gem 'mislav-will_paginate',
+    :lib => 'will_paginate',
+    :source => 'http://gems.github.com',
+    :version => '>= 2.3.11'
+    
     
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

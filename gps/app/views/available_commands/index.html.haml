@@ -12,4 +12,5 @@
       %td= link_to 'Edit', edit_available_command_path(available_command)
       %td= link_to 'Destroy', available_command, :confirm => 'Are you sure?', :method => :delete
 %br
+= will_paginate @available_command
 = link_to 'New', new_available_command_path

@@ -11,7 +11,7 @@ describe AvailableCommandsController do
 
   describe "GET index" do
     it "assigns all available_commands as @available_commands" do
-      AvailableCommand.stub!(:find).with(:all).and_return([mock_available_command])
+      AvailableCommand.stub!(:paginate).and_return([mock_available_command])
       get :index
       assigns[:available_commands].should == [mock_available_command]
     end

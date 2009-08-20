@@ -8,5 +8,6 @@ class CommandsController < ApplicationController
   end
   
   def index
+    @commands = Command.paginate(:page => params[:page])
   end
 end

@@ -46,4 +46,4 @@ config.gem 'rspec-rails',
   :version => '>= 1.2.7.1',
   :lib => false
 config.gem 'webrat',
-  :versino => '>= 0.5'
+  :versino => '>= 0.5.1'

@@ -20,6 +20,12 @@ module NavigationHelpers
     when /^the devices index page$/i
       devices_path
 
+    when /^the new user session page$/i
+      new_user_session_path
+
+    when /^the readings index page$/i
+      readings_path
+
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
         "Now, go and add a mapping in #{__FILE__}"

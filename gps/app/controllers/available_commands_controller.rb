@@ -2,7 +2,7 @@ class AvailableCommandsController < ApplicationController
   # GET /available_commands
   # GET /available_commands.xml
   def index
-    @available_commands = AvailableCommand.all
+    @available_commands = AvailableCommand.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.haml

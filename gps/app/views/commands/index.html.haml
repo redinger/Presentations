@@ -9,13 +9,15 @@
       %td Ended
       %td Reference
   %tbody
-    - Command.all.each do |command|
+    - @commands.each do |command|
       %tr
-        %td= link_to command.device.name, devices_path
+        %td= link_to command.device_name, devices_path
         %td= command.command
         %td= command.response
         %td= command.status
         %td= command.ended_at
         %td= command.reference_id
+
+= will_paginate @commands
 
 = link_to 'New Command', new_command_path

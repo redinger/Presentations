@@ -1,7 +1,8 @@
 $(document).ready(function() {
   var map = null;
-
-  $.getJSON('devices', function(json) {
+  page = $.parseQuery().page
+  if(page === undefined) {page = 1}
+  $.getJSON('devices', {page: page}, function(json) {
     $.each(json, function() {
       reading = this.device.last_reading.reading
       var latlng = new google.maps.LatLng(reading.latitude, reading.longitude);

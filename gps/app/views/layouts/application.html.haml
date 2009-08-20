@@ -10,11 +10,20 @@
     = stylesheet_link_tag 'compiled/print.css', :media => 'print'
     /[if lt IE 8]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
-    = javascript_include_tag 'jquery.js', 'jquery.livequery.js'
+    = javascript_include_tag 'jquery.js', 'jquery.livequery.js', 'jquery.parsequery.js'
     = yield(:head)
   
   %body.bp
     #container
+      = link_to 'Devices', devices_path
+      |
+      = link_to 'Commands', commands_path
+      |
+      = link_to 'Readings', readings_path
+      |
+      = link_to 'Available Commands', available_commands_path
+      |
+      = link_to 'Logout', logout_path
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
