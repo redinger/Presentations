@@ -15,6 +15,7 @@
       %td Speed
       %td Street
       %td Street Number
+      %td Updated
   %tbody
     - @readings.each do |reading|
       %tr
@@ -31,5 +32,6 @@
         %td= reading.speed
         %td= reading.street
         %td= reading.street_number
+        %td= reading.updated_at
         
 = will_paginate @readings

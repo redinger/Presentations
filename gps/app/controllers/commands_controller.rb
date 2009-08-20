@@ -8,6 +8,6 @@ class CommandsController < ApplicationController
   end
   
   def index
-    @commands = Command.paginate(:page => params[:page])
+    @commands = Command.paginate(:page => params[:page], :order => 'updated_at desc')
   end
 end

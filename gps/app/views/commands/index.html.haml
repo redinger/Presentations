@@ -8,6 +8,7 @@
       %td Status
       %td Ended
       %td Reference
+      %td Updated
   %tbody
     - @commands.each do |command|
       %tr
@@ -17,6 +18,7 @@
         %td= command.status
         %td= command.ended_at
         %td= command.reference_id
+        %td= command.updated_at
 
 = will_paginate @commands
 
