@@ -10,9 +10,15 @@ class CreateCommands < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :commands, :device_id
+    add_index :commands, :reference_id
   end
 
   def self.down
+    remove_index :commands, :reference_id
+    remove_index :commands, :device_id
+    mind
     drop_table :commands
   end
 end

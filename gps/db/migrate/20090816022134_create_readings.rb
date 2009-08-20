@@ -26,9 +26,11 @@ class CreateReadings < ActiveRecord::Migration
     end
     
     add_index :readings, :device_id
+    add_index :readings, :reference_id
   end
 
   def self.down
+    remove_index :readings, :reference_id
     remove_index :readings, :device_id
     drop_table :readings
   end
